@@ -1,9 +1,19 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from "react";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function Board() {
+  useEffect(() => {
+    
+  }, []);
+
   return (
-    <div>Board</div>
-  )
+    <DragDropContext>
+      <Droppable droppableId="board" direction="horizontal" type="column">
+        {(provided) => <div>{/* rendering columns */}</div>}
+      </Droppable>
+    </DragDropContext>
+  );
 }
 
-export default Board
+export default Board;

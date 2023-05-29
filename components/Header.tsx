@@ -8,7 +8,7 @@ function Header() {
     <header>
     <div className="flex flex-col items-center p-5 px-32 bg-black/20 md:flex-row">
         <div 
-            className='absolute top-0 left-0 w-full rounded-md opacity-50 h-96 bg-gradient-to-br from-pink-400 to-purple-400 filter blur-3xl -z-50' />
+            className='absolute top-0 left-0 w-full rounded-md opacity-50 h-96 bg-gradient-to-br from-pink-400 to-red-400 filter blur-3xl -z-50' />
       <div className="flex items-center gap-2 p-4 ">
         <BugAntIcon className="object-contain h-10 w-14" />
         <h1 className="text-4xl">AnTodo</h1>
