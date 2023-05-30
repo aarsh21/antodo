@@ -1,5 +1,5 @@
 interface Board {
-  coloums: Map<string, Column>;
+  coloums: Map<TypedColumn, Column>;
 }
 
 type TypedColumn = "todo" | "inprogress" | "done";
