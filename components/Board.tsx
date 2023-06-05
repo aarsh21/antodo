@@ -3,7 +3,6 @@ import { useBoardStore } from "@/store/BoardStore";
 import React, { useEffect } from "react";
 import { DragDropContext, DropResult, Droppable } from "react-beautiful-dnd";
 import Column from "./Column";
-import { CpuChipIcon } from "@heroicons/react/24/outline";
 
 function Board() {
   const [board, getBoard, setBoardState, updateTodoInDB] = useBoardStore(
@@ -90,7 +89,7 @@ function Board() {
       <Droppable droppableId="board" direction="horizontal" type="column">
         {(provided) => (
           <div
-            className="grid grid-cols-1 gap-5 mx-auto md:grid-cols-3 max-w-7xl"
+            className="grid grid-cols-1 gap-5 pt-20 mx-auto md:grid-cols-3 max-w-7xl"
             {...provided.droppableProps}
             ref={provided.innerRef}
           >

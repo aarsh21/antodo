@@ -5,14 +5,18 @@ import {
   MagnifyingGlassIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "react-avatar";
 
 function Header() {
-  const [searchString, setSearchString] = useBoardStore((state) => [
+  const [searchString, setSearchString, board] = useBoardStore((state) => [
     state.searchString,
     state.setSearchString,
+    state.board,
   ]);
+
+
+  
   return (
     <header>
       <div className="flex flex-col items-center p-5 px-32 bg-black/20 md:flex-row">
@@ -40,14 +44,7 @@ function Header() {
           <Avatar name="Aarsh Padia" round size="50" color="#000000" />
         </div>
       </div>
-
       {/* suggestion */}
-      <div className="flex items-center justify-center px-8 py-2 md:py-5">
-        <p className="flex items-center mt-4 px-5 p-3 font-light bg-white shadow-xl rounded-xl w-fit italic max-w-3xl text=[#000000]">
-          <UserCircleIcon className="inline-block w-10 h-10 mr-3 " />
-          GPT is summarizing your day!
-        </p>
-      </div>
     </header>
   );
 }
